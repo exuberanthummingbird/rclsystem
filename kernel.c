@@ -4,6 +4,6 @@
 
 void faka(void) {
     clearscreen();
-    printstr("FUCKING POROSHENKOS 2.0!!!");
+    printstr("Welcome to RCL System by Exuberant Hummingbird; an operating system forked from unfunny and cringe PoroshenkOS by fakadantiy");
     terminal_run();
 }
