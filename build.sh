@@ -1,5 +1,5 @@
 tesl() {
-  echo "PoroshenkOS installer: " $1
+  echo "RCL System installer: " $1
 }
 Cc="gcc"
 Asm="as"
@@ -40,22 +40,22 @@ $Cc -m32 -ffreestanding -c libs/terminal.c -o terminal.o
 tesl "Compilating [100%]"
 
 $Asm --32 boot.s -o boot.o
-tesl "Compilated bootloader"
+tesl "Compilated bootloader rebuild stack retesled microcode and tesl the stack"
 
-tesl "Linking"
+tesl "Linking env env env nev envnevnev"
 ld -m elf_i386 -T linker.ld -nostdlib -o kernel.bin boot.o kernel.o vga.o keyboard.o string.o terminal.o
 if [ ! -d isodir/boot/grub ]; then
   mkdir -p isodir/boot/grub
 fi
-tesl "Copying the kernel"
+tesl "Copying the kernel environment to isodir environment"
 cp kernel.bin isodir/boot/kernel.bin
 
-tesl "Making menuentry for PoroshenkOS"
+tesl "grub menuentry for RCLSys env"
 cat > isodir/boot/grub/grub.cfg << EOF
-menuentry "POROSHENKOS" {
+menuentry "RCL System" {
     multiboot /boot/kernel.bin
 }
 EOF
 tesl "Making ISO"
-grub-mkrescue -o poroshenkos.iso isodir
-tesl "You sucessfully built PoroshenkOS"
+grub-mkrescue -o rclsys.iso isodir
+tesl "You sucessfully built the greatest unlike others RCL Operating System"
