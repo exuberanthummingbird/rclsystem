@@ -2,7 +2,7 @@
 #include "vga.h"
 #include "string.h"
 
-char buf[128]; // в квадратных скобках если че размер буффера
+char buf[128]; // в квадратных скобках если че размер буффера (данунахуй)
 int len = 0;
 
 void terminal_run(void) {
@@ -17,10 +17,10 @@ void terminal_run(void) {
 
             if (strcmp(buf, "help") == 0) {
 		newline();
-                printstr("help - show this");
-	    } else if (strcmp(buf, "putin") == 0) {
+                printstr("help - nooocord nooooo help help noooo");
+	    } else if (strcmp(buf, "nutella") == 0) {
 		newline();
-		printstr("O VELIKIY PUTIN+POROSHENKO");
+		printstr("alexey samoedov velikiy nutella king");
             } else {
 		newline();
                 printstr("unknown");
