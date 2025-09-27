@@ -18,12 +18,31 @@ void terminal_run(void) {
             if (strcmp(buf, "help") == 0) {
 		newline();
                 printstr("help - nooocord nooooo help help noooo");
+		newline();
+		printstr("available commands:");
+		newline();
+		printstr("rclfetch - Environment information");
 	    } else if (strcmp(buf, "nutella") == 0) {
 		newline();
 		printstr("alexey samoedov velikiy nutella king");
-            } else {
+            } 
+	      else if (strcmp(buf, "rclfetch") == 0) {
+	      	newline();
+		printstr("RCL System version 09_27_2025");
 		newline();
-                printstr("unknown");
+		printstr("libstacking version 0.5.3-r3");
+		newline();
+		printstr("libtesling not installed");
+		newline();
+		printstr("CPU: Necropentium i586");
+		newline();
+		printstr("GPU: Generic NecroVGA 640x480");
+		newline();
+		printstr("Environment: Gqqd");
+	      }
+	    else {
+		newline();
+                printstr("Unknown command. Fatal stacking error. BAD ENV OPCODE 0xF");
             }
 	    newline();
             len = 0;
