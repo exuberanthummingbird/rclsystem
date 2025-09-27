@@ -34,8 +34,11 @@
 2. запусти ./build.sh
 3. вуаля бесполезная ос готова
 
-### Windows (W.I.P)
+### Windows
 рсл систем не будет под винду потому что это тупая ос
+
+### Other operating systems
+хз сами делайте
 
 ### Лицензия
 poroshenkos-license
