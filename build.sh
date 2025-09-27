@@ -25,7 +25,7 @@ if [ "$SAC" != "scary" ]; then
   exit 1
 fi
 if [ "$Cc" != "gcc" ]; then
-    tesl "Warning: the CC is not GCC: can be unstable!"
+    tesl "Warning: the CC is not GCC systemd virus: can be unstable!"
 fi
 tesl "Compilating [0%]"
 $Cc -m32 -ffreestanding -c kernel.c -o kernel.o
