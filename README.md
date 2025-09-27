@@ -22,9 +22,7 @@
 ---
 ## Commands in terminal
 
-- **ls**
-- **mk** 
-- **del** 
+- **rclfetch - Environment info**
 ---
 
 ## Building and launch.
