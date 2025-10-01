@@ -4,6 +4,6 @@
 
 void faka(void) {
     clearscreen();
-    printstr("Welcome to RCL System by Exuberant Hummingbird; an operating system forked from unfunny and cringe PoroshenkOS by fakadantiy");
+    printstr("Welcome to RCL System by NSA of RCL");
     terminal_run();
 }
