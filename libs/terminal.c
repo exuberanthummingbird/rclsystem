@@ -27,8 +27,7 @@ void terminal_run(void) {
 	    } else if (strcmp(buf, "nutella") == 0) {
 		newline();
 		printstr("alexey samoedov velikiy nutella king");
-            }
-			{ else if (strcmp(buf, "linux") == 0) {
+            } else if (strcmp(buf, "linux") == 0) {
 				newline();
     			printstr("     ^     ");
     			newline();
