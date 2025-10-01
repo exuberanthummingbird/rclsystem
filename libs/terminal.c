@@ -22,10 +22,31 @@ void terminal_run(void) {
 		printstr("available commands:");
 		newline();
 		printstr("rclfetch - Environment information");
+		newline();
+		printstr("linux - Very important thing."
 	    } else if (strcmp(buf, "nutella") == 0) {
 		newline();
 		printstr("alexey samoedov velikiy nutella king");
-            } 
+            }
+			{ else if (strcmp(buf, "linux") == 0) {
+				newline();
+    			printstr("     ^     ");
+    			newline();
+    			printstr("____/_\\____");
+    newline();
+    printstr("\\  /   \\  /");
+    newline();
+    printstr(" \\/     \\/ ");
+    newline();
+    printstr(" /\\     /\\ ");
+    newline();
+    printstr("/__\\___/__\\ ");
+    newline();
+    printstr("    \\ /    ");
+    newline();
+    printstr("     -     ");
+    newline();
+			}
 	      else if (strcmp(buf, "rclfetch") == 0) {
 	      	newline();
 		printstr("RCL System version 09_27_2025");
