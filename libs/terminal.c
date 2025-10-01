@@ -23,7 +23,7 @@ void terminal_run(void) {
 		newline();
 		printstr("rclfetch - Environment information");
 		newline();
-		printstr("linux - Very important thing."
+		printstr("linux - Very important thing.";
 	    } else if (strcmp(buf, "nutella") == 0) {
 		newline();
 		printstr("alexey samoedov velikiy nutella king");
