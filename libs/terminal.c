@@ -2,7 +2,7 @@
 #include "vga.h"
 #include "string.h"
 
-char buf[128]; // в квадратных скобках если че размер буффера (данунахуй)
+char buf[128];
 int len = 0;
 
 void terminal_run(void) {
