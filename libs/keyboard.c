@@ -1,4 +1,5 @@
 #include "keyboard.h"
+#include "io.h"
 
 unsigned char last_scancode = 0;
 
@@ -9,11 +10,6 @@ unsigned char scancode_to_ascii[128] = {
     'z','x','c','v','b','n','m',',','.','/', 0, '*', 0, ' '
 };
 
-static inline unsigned char inb(unsigned short port) {
-    unsigned char result;
-    __asm__ __volatile__ ("inb %1, %0" : "=a"(result) : "Nd"(port));
-    return result;
-}
 
 char keyboard_getchar(void) {
     unsigned char status;

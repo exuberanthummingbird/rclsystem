@@ -31,6 +31,8 @@ tesl "Compilating [0%]"
 $Cc -m32 -ffreestanding -c kernel.c -o kernel.o
 tesl "Compilating [20%]"
 $Cc -m32 -ffreestanding -c libs/vga.c -o vga.o
+tesl "Compilating [30%]"
+$Cc -m32 -ffreestanding -c libs/io.c -o io.o
 tesl "Compilating [40%]"
 $Cc -m32 -ffreestanding -c libs/keyboard.c -o keyboard.o
 tesl "Compilating [60%]"
@@ -43,7 +45,7 @@ $Asm --32 boot.s -o boot.o
 tesl "Compilated bootloader rebuild stack retesled microcode and tesl the stack"
 
 tesl "Linking env env env nev envnevnev"
-ld -m elf_i386 -T linker.ld -nostdlib -o kernel.bin boot.o kernel.o vga.o keyboard.o string.o terminal.o
+ld -m elf_i386 -T linker.ld -nostdlib -o kernel.bin boot.o kernel.o vga.o keyboard.o string.o terminal.o io.o
 if [ ! -d isodir/boot/grub ]; then
   mkdir -p isodir/boot/grub
 fi
