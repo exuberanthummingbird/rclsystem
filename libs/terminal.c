@@ -90,6 +90,3 @@ void terminal_run(void) {
         }
     }
 }
-
-    }
-}
