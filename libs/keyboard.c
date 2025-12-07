@@ -15,9 +15,8 @@ char keyboard_getchar(void) {
     unsigned char status;
     unsigned char scancode;
 
-    do {
-        status = inb(0x64);      
-    } while ((status & 1) == 0);
+    status = inb(0x64);
+    if ((status & 1) == 0) return 0;
 
     scancode = inb(KEYBOARD_PORT);
 
@@ -25,3 +24,4 @@ char keyboard_getchar(void) {
 
     return scancode_to_ascii[scancode];
 }
+
