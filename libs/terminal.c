@@ -8,7 +8,10 @@ int len = 0;
 void terminal_run(void) {
     newline();
     printstr("> ");
+	cursor_pos = cursor;
+	update_cursor();
     while (1) {
+		update_cursor();
         char c = keyboard_getchar();
         if (!c) continue;
 
@@ -67,16 +70,26 @@ void terminal_run(void) {
 	    newline();
             len = 0;
             printstr("> ");
+			cursor_pos = cursor;
+            update_cursor();
         } else if (c == '\b') {
-	    if (len > 0) {
-		len--;
-		cursor -= 2;
-		putchar(' ');
-		cursor -= 2;
-	    }
-	} else {
+		if (len > 0) {
+    		len--;
+    		cursor -= 2;
+    		VIDMEM[cursor] = ' ';
+    		VIDMEM[cursor+1] = 0x07;
+
+		cursor_pos = cursor;
+		update_cursor();
+    	}
+    } else {
             if (len < 127) buf[len++] = c;
             putchar(c);
+		cursor_pos = cursor;
+		update_cursor();
         }
+    }
+}
+
     }
 }
